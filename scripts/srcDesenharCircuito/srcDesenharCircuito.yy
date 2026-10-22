@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"srcDesenharCircuito",
   "parent":{
-    "name":"Mellting",
-    "path":"Mellting.yyp",
+    "name":"AcessoNegado",
+    "path":"AcessoNegado.yyp",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

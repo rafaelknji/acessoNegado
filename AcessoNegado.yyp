@@ -1,6 +1,6 @@
 {
   "$GMProject":"v1",
-  "%Name":"Mellting",
+  "%Name":"AcessoNegado",
   "AudioGroups":[
     {"$GMAudioGroup":"v1","%Name":"audiogroup_default","exportDir":"","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
   ],
@@ -25,7 +25,7 @@
   "MetaData":{
     "IDEVersion":"2026.0.0.16",
   },
-  "name":"Mellting",
+  "name":"AcessoNegado",
   "resources":[
     {"id":{"name":"fntTerminal","path":"fonts/fntTerminal/fntTerminal.yy",},},
     {"id":{"name":"oBlocoCurvo","path":"objects/oBlocoCurvo/oBlocoCurvo.yy",},},

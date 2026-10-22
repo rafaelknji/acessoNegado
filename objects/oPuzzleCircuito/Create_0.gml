@@ -49,6 +49,3 @@ pulso_luz = 0;
 
 
 
-// TESTE TEMPORÁRIO DO TEXTO
-concluido = true;
-letras_visiveis = string_length(texto_acesso);
