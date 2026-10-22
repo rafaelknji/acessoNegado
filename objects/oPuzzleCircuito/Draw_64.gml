@@ -12,8 +12,8 @@ if (concluido) {
         }
     }
 
-    var texto_x = x + 145;
-    var texto_y = y + 73;
+    var texto_x = x + 157;
+    var texto_y = y + 78;
 
     if (view_enabled && view_visible[0]) {
         var cam = view_camera[0];

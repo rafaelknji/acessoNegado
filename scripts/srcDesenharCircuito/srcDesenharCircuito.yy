@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"srcDesenharCircuito",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"srcDesenharCircuito",
+  "parent":{
+    "name":"Mellting",
+    "path":"Mellting.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -29,3 +29,10 @@ contador_texto = 0;
 
 // Velocidade da digitação
 frames_por_letra = 4;
+
+// Progresso da animação: 0 = azul, 1 = verde
+progresso_verde = 0;
+
+// Animação da luz do painel
+anim_luz = 0;
+pulso_luz = 0;

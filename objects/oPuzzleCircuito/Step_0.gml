@@ -174,8 +174,4 @@ if (concluido) {
     // Reproduzir bip de sucesso
     audio_play_sound(acessoLiberado, 0, false);
 
-    // Deixar todos os blocos verdes
-    for (var i = 0; i < 9; i++) {
-        pecas[i].image_blend = c_lime;
-    }
 }
