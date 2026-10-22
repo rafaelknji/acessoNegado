@@ -20,6 +20,16 @@ solucao = [
      3, 10,  8
 ];
 
+ // Solução correta do puzzle 5x5
+solucao5x5 = [
+     2, 10, 12,  6, 12,
+    -1,  6, 11,  9,  5,
+     6, 13,  6, 10,  9,
+     3, 11, 13, -1, -1,
+    -1, -1,  3, 10,  8
+];
+
+
 // Mensagem do terminal
 texto_acesso = "ACESSO LIBERADO";
 
@@ -36,3 +46,9 @@ progresso_verde = 0;
 // Animação da luz do painel
 anim_luz = 0;
 pulso_luz = 0;
+
+
+
+// TESTE TEMPORÁRIO DO TEXTO
+concluido = true;
+letras_visiveis = string_length(texto_acesso);

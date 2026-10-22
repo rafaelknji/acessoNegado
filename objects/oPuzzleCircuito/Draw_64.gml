@@ -31,12 +31,26 @@ if (concluido) {
     draw_set_color(c_lime);
     draw_set_halign(fa_center);
     draw_set_valign(fa_middle);
+	
+	if (colunas == 5 && linhas == 5) {
 
+    // Ajustar a posição apenas no puzzle 5x5
+    texto_x += 54;
+    texto_y += 27;
+}
+
+ // Texto maior no puzzle 5x5
+    if (colunas == 5 && linhas == 5) {
+    draw_text_transformed(texto_x, texto_y, texto_atual, 1.35, 1.35, 0);
+
+} else {
+    // Texto normal no puzzle 3x3
     draw_text(
         texto_x,
         texto_y,
         texto_atual
     );
+}
 
     draw_set_font(-1);
     draw_set_color(c_white);
