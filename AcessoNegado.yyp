@@ -58,6 +58,7 @@
     {"id":{"name":"shLuzPainel","path":"shaders/shLuzPainel/shLuzPainel.yy",},},
     {"id":{"name":"acessoLiberado","path":"sounds/acessoLiberado/acessoLiberado.yy",},},
     {"id":{"name":"giroBloco","path":"sounds/giroBloco/giroBloco.yy",},},
+    {"id":{"name":"musicPuzzle1","path":"sounds/musicPuzzle1/musicPuzzle1.yy",},},
     {"id":{"name":"sBlocoCurvo","path":"sprites/sBlocoCurvo/sBlocoCurvo.yy",},},
     {"id":{"name":"sBlocoFinal","path":"sprites/sBlocoFinal/sBlocoFinal.yy",},},
     {"id":{"name":"sBlocoInicio","path":"sprites/sBlocoInicio/sBlocoInicio.yy",},},
@@ -74,9 +75,9 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"inicio","path":"rooms/inicio/inicio.yy",},},
     {"roomId":{"name":"sala2","path":"rooms/sala2/sala2.yy",},},
     {"roomId":{"name":"sala1","path":"rooms/sala1/sala1.yy",},},
-    {"roomId":{"name":"inicio","path":"rooms/inicio/inicio.yy",},},
     {"roomId":{"name":"puzzleCircuito1","path":"rooms/puzzleCircuito1/puzzleCircuito1.yy",},},
     {"roomId":{"name":"puzzleCircuito2","path":"rooms/puzzleCircuito2/puzzleCircuito2.yy",},},
     {"roomId":{"name":"sala3","path":"rooms/sala3/sala3.yy",},},

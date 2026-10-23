@@ -2,7 +2,7 @@
 draw_self();
 
 // Exibir mensagem quando concluir
-if (true) {
+if (concluido) {
 
     var texto_atual = string_copy(
         texto_acesso,
@@ -10,7 +10,6 @@ if (true) {
         letras_visiveis
     );
 	
-	texto_atual = "ACESSO LIBERADO";
 
     // Posição relativa ao próprio puzzle
     var texto_x = x;

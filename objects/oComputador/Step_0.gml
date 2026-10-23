@@ -1,3 +1,40 @@
+
+// MUSICA DO PUZZLE
+
+
+// Tocar enquanto o puzzle estiver aberto
+var tocar_musica = global.puzzle_aberto;
+
+// Parar quando o puzzle for concluído
+if (instance_exists(oPuzzleCircuito)) {
+    if (oPuzzleCircuito.concluido) {
+        tocar_musica = false;
+    }
+}
+
+if (tocar_musica) {
+
+    // Começar uma única vez, em loop
+    if (musica_puzzle_id == -1) {
+        musica_puzzle_id = audio_play_sound(
+            musicPuzzle1,
+            1,
+            true,
+            0.35
+        );
+    }
+
+} else {
+
+    // Parar ao fechar ou concluir
+    if (musica_puzzle_id != -1) {
+        audio_stop_sound(musica_puzzle_id);
+        musica_puzzle_id = -1;
+    }
+}
+
+
+
 // Fechar puzzle
 if (global.puzzle_aberto) {
 
