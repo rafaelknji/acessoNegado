@@ -74,9 +74,9 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"sala2","path":"rooms/sala2/sala2.yy",},},
     {"roomId":{"name":"sala1","path":"rooms/sala1/sala1.yy",},},
     {"roomId":{"name":"inicio","path":"rooms/inicio/inicio.yy",},},
-    {"roomId":{"name":"sala2","path":"rooms/sala2/sala2.yy",},},
     {"roomId":{"name":"puzzleCircuito1","path":"rooms/puzzleCircuito1/puzzleCircuito1.yy",},},
     {"roomId":{"name":"puzzleCircuito2","path":"rooms/puzzleCircuito2/puzzleCircuito2.yy",},},
     {"roomId":{"name":"sala3","path":"rooms/sala3/sala3.yy",},},
