@@ -1,5 +1,5 @@
 // Desenhar o computador apenas fora da Room2
-if (room != sala2) {
+if (room != sala2 && room != sala3) {
     draw_self();
 };
 

@@ -20,3 +20,7 @@ fade_troca_sala = global.fade_entrada ? 1 : 0;
 
 // Velocidade do fade entre salas
 velocidade_troca_sala = 0.03;
+
+if (!variable_global_exists("puzzle_aberto")) {
+    global.puzzle_aberto = false;
+}

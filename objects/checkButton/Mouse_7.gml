@@ -1,0 +1,1 @@
+sprite_index = spr_check_button

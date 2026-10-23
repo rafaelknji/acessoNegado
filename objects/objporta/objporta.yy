@@ -6,8 +6,8 @@
   "name":"objporta",
   "overriddenProperties":[],
   "parent":{
-    "name":"objetos",
-    "path":"folders/objetos.yy",
+    "name":"objetosCenario",
+    "path":"folders/Objects/objetosCenario.yy",
   },
   "parentObjectId":null,
   "persistent":false,
