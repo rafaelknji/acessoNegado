@@ -1,63 +1,56 @@
-// Encontrar o shader
-var shader_luz = asset_get_index("shLuzPainel");
-
-// Coordenadas da luz vermelha
-// USE AQUI OS VALORES QUE VOCE JA ACERTOU
-var centro_x = 285;
-var centro_y = 117;
-
-var raio_luz = 11;
-
-// Verificar se o shader existe e compilou
-if (shader_luz == -1) {
-    draw_self();
-    exit;
-}
-
-if (!shader_is_compiled(shader_luz)) {
-    draw_self();
-    exit;
-}
-
-// Antes de concluir, desenhar normalmente
-if (anim_luz <= 0) {
-    draw_self();
-    exit;
-}
-
-// Ativar shader
-shader_set(shader_luz);
-
-// Enviar a posição real da luz na Room
-var u_centro = shader_get_uniform(
-    shader_luz, "u_centro"
-);
-
-shader_set_uniform_f(
-    u_centro,
-    x + centro_x,
-    y + centro_y
-);
-
-// Enviar raio
-var u_raio = shader_get_uniform(
-    shader_luz, "u_raio"
-);
-
-shader_set_uniform_f(u_raio, raio_luz);
-
-// Enviar progresso da animação
-var u_progresso = shader_get_uniform(
-    shader_luz, "u_progresso"
-);
-
-shader_set_uniform_f(
-    u_progresso,
-    anim_luz
-);
-
-// Desenhar o painel
+// Desenhar o painel do puzzle
 draw_self();
 
-// Desativar shader
-shader_reset();
+// Exibir mensagem quando concluir
+if (true) {
+
+    var texto_atual = string_copy(
+        texto_acesso,
+        1,
+        letras_visiveis
+    );
+	
+	texto_atual = "ACESSO LIBERADO";
+
+    // Posição relativa ao próprio puzzle
+    var texto_x = x;
+    var texto_y = y;
+    var escala = 1;
+
+    // Puzzle 5x5
+    if (colunas == 5 && linhas == 5) {
+        texto_x += 63;
+        texto_y += 37;
+        escala = 0.47;
+    }
+
+    // Puzzle 3x3
+    if (colunas == 3 && linhas == 3) {
+        texto_x += 57;
+        texto_y += 33;
+        escala = 0.43;
+    }
+
+    draw_set_font(fntTerminal);
+    draw_set_color(c_lime);
+    draw_set_halign(fa_center);
+    draw_set_valign(fa_middle);
+
+    draw_text_transformed(
+        texto_x,
+        texto_y,
+        texto_atual,
+        escala,
+        escala,
+        0
+    );
+
+    // Restaurar configurações
+    draw_set_font(-1);
+    draw_set_color(c_white);
+    draw_set_halign(fa_left);
+    draw_set_valign(fa_top);
+}
+
+
+

@@ -6,8 +6,8 @@
   "name":"oBlocoT",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"puzzleCircuito",
+    "path":"folders/Objects/puzzleCircuito.yy",
   },
   "parentObjectId":{
     "name":"oPecaGiratoria",

@@ -9,8 +9,8 @@
   "name":"oBlocoInicio",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"puzzleCircuito",
+    "path":"folders/Objects/puzzleCircuito.yy",
   },
   "parentObjectId":null,
   "persistent":false,

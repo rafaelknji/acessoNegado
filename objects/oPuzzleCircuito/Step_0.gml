@@ -1,43 +1,59 @@
+
+// Não verificar o puzzle enquanto estiver fechado
+if (room == sala2 && !global.puzzle_aberto) {
+    exit;
+}
+
+
+
 // ==========================================
 // 1. MENSAGEM DE CONCLUSÃO
 // ==========================================
 
 if (concluido) {
 
-    // Digitar a mensagem letra por letra
+    // Mostrar texto letra por letra
     if (letras_visiveis < string_length(texto_acesso)) {
 
         contador_texto++;
 
         if (contador_texto >= frames_por_letra) {
-
             letras_visiveis++;
             contador_texto = 0;
         }
 
     } else {
 
-        // Mensagem terminou de aparecer
+        // Esperar após a mensagem
         tempo_proxima_sala++;
 
-        // Avançar para Room2 somente no puzzle 3x3
-        if (colunas == 3 && linhas == 3 &&
-            room != sala2 &&
-            tempo_proxima_sala >= 60) {
+        if (tempo_proxima_sala >= 60 && !global.trocar_sala) {
 
-            // Evitar iniciar a transição várias vezes
-            if (!global.trocar_sala) {
+            // Definir destino conforme o puzzle
+            if (colunas == 3 && linhas == 3) {
 
-                global.trocar_sala = true;
                 global.sala_destino = sala2;
 
-                // Esconder o puzzle
-                var camada_puzzle = layer_get_id("Puzzle");
+            } else if (colunas == 5 && linhas == 5) {
 
-                if (camada_puzzle != -1) {
-                    layer_set_visible(camada_puzzle, false);
-                }
+                global.sala_destino = sala3;
+
+            } else {
+
+                exit;
             }
+
+            // Iniciar transição
+            global.trocar_sala = true;
+
+            // Esconder puzzle
+            var camada = layer_get_id("Puzzle");
+
+            if (camada != -1) {
+                layer_set_visible(camada, false);
+            }
+
+            show_debug_message("TRANSICAO INICIADA!");
         }
     }
 

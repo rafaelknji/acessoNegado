@@ -1,26 +1,32 @@
 // Esconder o puzzle ao iniciar
-layer_set_visible("Puzzle", false);
+var camada_puzzle = layer_get_id("Puzzle");
 
-// Garantir que a camada de escurecimento esteja visível
-layer_set_visible("Escurecimento", true);
-
-// Criar o controlador caso não exista
-if (!instance_exists(oEscurecimento)) {
-
-    instance_create_layer(
-        0,
-        0,
-        "Escurecimento",
-        oEscurecimento
-    );
+if (camada_puzzle != -1) {
+    layer_set_visible(camada_puzzle, false);
 }
 
-// Começar com o desfoque desativado
-layer_enable_fx("Desfoque", false);
+// Manter a camada de escurecimento visível
+var camada_escuro = layer_get_id("Escurecimento");
 
+if (camada_escuro != -1) {
 
+    layer_set_visible(camada_escuro, true);
 
+    // Criar o objeto somente se ainda não existir
+    if (!instance_exists(oEscurecimento)) {
 
-// TESTE TEMPORÁRIO DO PUZZLE
-//global.puzzle_aberto = true;
-//layer_set_visible("Puzzle", true);
+        instance_create_layer(
+            0,
+            0,
+            camada_escuro,
+            oEscurecimento
+        );
+    }
+}
+
+// Desativar o desfoque inicialmente
+var camada_desfoque = layer_get_id("Desfoque");
+
+if (camada_desfoque != -1) {
+    layer_enable_fx(camada_desfoque, false);
+}

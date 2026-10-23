@@ -1,4 +1,4 @@
-window_set_size(1280,720)
+
 
 // Movimento
 velocidade = 1.5;
