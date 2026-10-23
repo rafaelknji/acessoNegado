@@ -1,3 +1,6 @@
+window_set_size(1292,780)
+
+
 // Distância máxima para interagir
 alcance_interacao = 60;
 

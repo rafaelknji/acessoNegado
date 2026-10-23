@@ -90,7 +90,8 @@ var movimento_x = xsp * velocidade;
 if (!place_meeting(x + movimento_x, y, objparedes1) &&
     !place_meeting(x + movimento_x, y, objtoppar) &&
     !place_meeting(x + movimento_x, y, cerquinha) &&
-    !place_meeting(x + movimento_x, y, objporta)) {
+    !place_meeting(x + movimento_x, y, objporta) &&
+    !place_meeting(x + movimento_x, y, parede3obj)){
 
     x += movimento_x;
 }
@@ -102,7 +103,8 @@ var movimento_y = ysp * velocidade;
 if (!place_meeting(x, y + movimento_y, objparedes1) &&
     !place_meeting(x, y + movimento_y, objtoppar) &&
     !place_meeting(x, y + movimento_y, cerquinha) &&
-    !place_meeting(x, y + movimento_y, objporta)) {
+    !place_meeting(x, y + movimento_y, objporta) &&
+    !place_meeting(x, y + movimento_y, parede3obj)) {
 
     y += movimento_y;
 }
