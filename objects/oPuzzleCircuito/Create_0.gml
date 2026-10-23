@@ -1,3 +1,5 @@
+window_set_size(1280,720)
+
 concluido = false;
 
 randomize();
@@ -46,6 +48,9 @@ progresso_verde = 0;
 // Animação da luz do painel
 anim_luz = 0;
 pulso_luz = 0;
+
+// Tempo de espera antes de mudar de sala
+tempo_proxima_sala = 0;
 
 
 

@@ -1,0 +1,100 @@
+// Impedir movimento durante o puzzle
+if (global.puzzle_aberto) {
+
+    image_speed = 0;
+    exit;
+}
+
+
+
+// MOVIMENTAÇÃO TOP-DOWN
+// =================================
+
+xsp = 0;
+ysp = 0;
+
+// Horizontal
+if (keyboard_check(vk_left) || keyboard_check(ord("A"))) {
+    xsp -= 1;
+}
+
+if (keyboard_check(vk_right) || keyboard_check(ord("D"))) {
+    xsp += 1;
+}
+
+// Vertical
+if (keyboard_check(vk_up) || keyboard_check(ord("W"))) {
+    ysp -= 1;
+}
+
+if (keyboard_check(vk_down) || keyboard_check(ord("S"))) {
+    ysp += 1;
+}
+
+
+// =================================
+// DIREÇÃO E SPRITES
+// =================================
+
+var nova_sprite = sprite_index;
+
+if (xsp > 0) {
+
+    nova_sprite = sRayssaLado;
+    image_xscale = 1;
+
+} else if (xsp < 0) {
+
+    nova_sprite = sRayssaLado;
+    image_xscale = -1;
+
+} else if (ysp > 0) {
+
+    nova_sprite = srRayssaFrente;
+    image_xscale = 1;
+
+} else if (ysp < 0) {
+
+    nova_sprite = sRayssaCostas;
+    image_xscale = 1;
+}
+
+// Trocar sprite apenas quando mudar de direção
+if (sprite_index != nova_sprite) {
+    sprite_index = nova_sprite;
+}
+
+
+// =================================
+// NORMALIZAR DIAGONAL
+// =================================
+
+var distancia = point_distance(0, 0, xsp, ysp);
+
+if (distancia > 0) {
+    xsp /= distancia;
+    ysp /= distancia;
+}
+
+
+// =================================
+// MOVIMENTAR
+// =================================
+
+x += xsp * velocidade;
+y += ysp * velocidade;
+
+
+// =================================
+// ANIMAÇÃO
+// =================================
+
+if (xsp != 0 || ysp != 0) {
+
+    image_speed = 1;
+
+} else {
+
+    image_speed = 0;
+    image_index = 0;
+}
