@@ -52,5 +52,10 @@ pulso_luz = 0;
 // Tempo de espera antes de mudar de sala
 tempo_proxima_sala = 0;
 
+// Painel específico da Room2
+if (room == sala2) {
+    sprite_index = sPainel5x5;
+}
+
 
 

@@ -38,25 +38,28 @@ if (keyboard_check(vk_down) || keyboard_check(ord("S"))) {
 
 var nova_sprite = sprite_index;
 
+// Manter a escala da personagem
+var escala = abs(image_yscale);
+
 if (xsp > 0) {
 
     nova_sprite = sRayssaLado;
-    image_xscale = 1;
+    image_xscale = escala;
 
 } else if (xsp < 0) {
 
     nova_sprite = sRayssaLado;
-    image_xscale = -1;
+    image_xscale = -escala;
 
 } else if (ysp > 0) {
 
     nova_sprite = srRayssaFrente;
-    image_xscale = 1;
+    image_xscale = escala;
 
 } else if (ysp < 0) {
 
     nova_sprite = sRayssaCostas;
-    image_xscale = 1;
+    image_xscale = escala;
 }
 
 // Trocar sprite apenas quando mudar de direção
@@ -85,16 +88,21 @@ if (distancia > 0) {
 var movimento_x = xsp * velocidade;
 
 if (!place_meeting(x + movimento_x, y, objparedes1) &&
-    !place_meeting(x + movimento_x, y, objtoppar)) {
+    !place_meeting(x + movimento_x, y, objtoppar) &&
+    !place_meeting(x + movimento_x, y, cerquinha) &&
+    !place_meeting(x + movimento_x, y, objporta)) {
 
     x += movimento_x;
 }
+
 
 // Movimento vertical
 var movimento_y = ysp * velocidade;
 
 if (!place_meeting(x, y + movimento_y, objparedes1) &&
-    !place_meeting(x, y + movimento_y, objtoppar)) {
+    !place_meeting(x, y + movimento_y, objtoppar) &&
+    !place_meeting(x, y + movimento_y, cerquinha) &&
+    !place_meeting(x, y + movimento_y, objporta)) {
 
     y += movimento_y;
 }
