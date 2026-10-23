@@ -15,14 +15,29 @@ if (instance_exists(oPuzzleCircuito)) {
 if (tocar_musica) {
 
     // Começar uma única vez, em loop
-    if (musica_puzzle_id == -1) {
-        musica_puzzle_id = audio_play_sound(
-            musicPuzzle1,
-            1,
-            true,
-            0.35
-        );
+   if (musica_puzzle_id == -1) {
+
+    // Música padrão do puzzle 3x3
+    var musica = musicPuzzle1;
+
+    // Música específica do puzzle 5x5
+    if (instance_exists(oPuzzleCircuito)) {
+
+        if (oPuzzleCircuito.colunas == 5 &&
+            oPuzzleCircuito.linhas == 5) {
+
+            musica = musicPuzzle2;
+        }
     }
+
+    // Reproduzir música em loop
+    musica_puzzle_id = audio_play_sound(
+        musica,
+        1,
+        true,
+        0.35
+    );
+}
 
 } else {
 

@@ -78,11 +78,26 @@ if (distancia > 0) {
 
 
 // =================================
-// MOVIMENTAR
+// MOVIMENTAÇÃO COM COLISÃO
 // =================================
 
-x += xsp * velocidade;
-y += ysp * velocidade;
+// Movimento horizontal
+var movimento_x = xsp * velocidade;
+
+if (!place_meeting(x + movimento_x, y, objparedes1) &&
+    !place_meeting(x + movimento_x, y, objtoppar)) {
+
+    x += movimento_x;
+}
+
+// Movimento vertical
+var movimento_y = ysp * velocidade;
+
+if (!place_meeting(x, y + movimento_y, objparedes1) &&
+    !place_meeting(x, y + movimento_y, objtoppar)) {
+
+    y += movimento_y;
+}
 
 
 // =================================

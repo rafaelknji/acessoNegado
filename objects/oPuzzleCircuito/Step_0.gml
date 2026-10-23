@@ -1,3 +1,10 @@
+// Não executar o puzzle enquanto estiver fechado
+if (variable_global_exists("puzzle_aberto")) {
+    if (!global.puzzle_aberto) {
+        exit;
+    }
+}
+
 
 // Não verificar o puzzle enquanto estiver fechado
 if (room == sala2 && !global.puzzle_aberto) {

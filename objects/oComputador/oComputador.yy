@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sComputador",
-    "path":"sprites/sComputador/sComputador.yy",
+    "name":"Sprite16",
+    "path":"sprites/Sprite16/Sprite16.yy",
   },
   "spriteMaskId":null,
   "visible":true,

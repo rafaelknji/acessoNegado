@@ -9,3 +9,6 @@ ysp = 0;
 sprite_index = srRayssaFrente;
 image_speed = 0;
 image_index = 0;
+
+// Usar sempre a mesma máscara de colisão
+mask_index = srRayssaFrente;

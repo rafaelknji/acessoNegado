@@ -1,3 +1,10 @@
+// Impedir interação quando o puzzle estiver fechado
+if (variable_global_exists("puzzle_aberto")) {
+    if (!global.puzzle_aberto) {
+        exit;
+    }
+}
+
 // Impedir novos cliques durante a animação
 if (girando) {
     exit;

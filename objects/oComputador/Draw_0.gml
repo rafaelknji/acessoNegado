@@ -30,8 +30,8 @@ if (instance_exists(oPlayer)) {
             texto_x,
             texto_y,
             "[E] Interagir",
-            escala,
-            escala,
+            0.6,
+            0.6,
             0
         );
 
