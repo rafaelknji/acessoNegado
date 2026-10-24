@@ -11,3 +11,5 @@ musica_puzzle_id = -1;
 if (room == sala2) {
     sprite_index = Sprpainel2;
 }
+
+global.confirmou_senha = false;

@@ -1,0 +1,1 @@
+global.confirmou_senha = true;
