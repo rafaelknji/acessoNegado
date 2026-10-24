@@ -20,7 +20,7 @@ if (global.indice >= array_length(falas)) {
     visible = false;
 
     // Definir destino
-    global.sala_destino = sala3;
+    global.sala_destino = sala2;
 
     // Iniciar animação de escurecimento
     global.trocar_sala = true;

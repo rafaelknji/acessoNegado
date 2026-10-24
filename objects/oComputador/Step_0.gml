@@ -51,6 +51,8 @@ if (room == sala3 && global.confirmou_senha && !global.trocar_sala) {
 
     // Senha correta
     if (acertou) {
+		
+		audio_play_sound(acessoLiberado, 1, false, 0.7);
 
         show_debug_message("SENHA CORRETA!");
 
@@ -78,7 +80,7 @@ if (room == sala3 && global.confirmou_senha && !global.trocar_sala) {
         }
 
         // Transição para cena final
-        global.sala_destino = cenaFinal;
+        global.sala_destino = cenaFinaaaal;
         global.trocar_sala = true;
     }
 }
