@@ -37,7 +37,7 @@ if (concluido) {
             // Definir destino conforme o puzzle
             if (colunas == 3 && linhas == 3) {
 
-                global.sala_destino = sala2;
+                global.sala_destino = cena2;
 
             } else if (colunas == 5 && linhas == 5) {
 
