@@ -38,8 +38,9 @@ O desafio consiste em desenvolver um jogo que aborde questões relacionadas à a
 
 ## Sobre o jogo
 
-Em uma sociedade distópica, marcada pela desigualdade e exclusão social, a tecnologia é utilizada como ferramenta de controle.
-O jogador acompanha uma personagem que explora ambientes, interage com computadores e resolve desafios para superar os obstáculos impostos pelo sistema.
+Acesso Negado é um jogo de aventura narrativa ambientado em uma sociedade distópica, onde as pessoas são divididas em camadas de acordo com sua produtividade.
+
+A história acompanha Rayssa, uma jovem programadora com deficiência visual que, após ser negligenciada pelo governo, é enviada para uma das camadas inferiores. Com a ajuda de outros personagens, ela busca desafiar o sistema, superar obstáculos e lutar pelos direitos daqueles que foram excluídos.
 
 <br>
 
