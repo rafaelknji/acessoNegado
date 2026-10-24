@@ -1,55 +1,3 @@
-
-// MUSICA DO PUZZLE
-
-
-// Tocar enquanto o puzzle estiver aberto
-var tocar_musica = global.puzzle_aberto;
-
-// Parar quando o puzzle for concluído
-if (instance_exists(oPuzzleCircuito)) {
-    if (oPuzzleCircuito.concluido) {
-        tocar_musica = false;
-    }
-}
-
-if (tocar_musica) {
-
-    // Começar uma única vez, em loop
-   if (musica_puzzle_id == -1) {
-
-    // Música padrão do puzzle 3x3
-    var musica = musicPuzzle1;
-
-    // Música específica do puzzle 5x5
-    if (instance_exists(oPuzzleCircuito)) {
-
-        if (oPuzzleCircuito.colunas == 5 &&
-            oPuzzleCircuito.linhas == 5) {
-
-            musica = musicPuzzle2;
-        }
-    }
-
-    // Reproduzir música em loop
-    musica_puzzle_id = audio_play_sound(
-        musica,
-        1,
-        true,
-        0.35
-    );
-}
-
-} else {
-
-    // Parar ao fechar ou concluir
-    if (musica_puzzle_id != -1) {
-        audio_stop_sound(musica_puzzle_id);
-        musica_puzzle_id = -1;
-    }
-}
-
-
-
 // Fechar puzzle
 if (global.puzzle_aberto) {
 
@@ -58,6 +6,7 @@ if (global.puzzle_aberto) {
         global.puzzle_aberto = false;
 
         layer_set_visible("Puzzle", false);
+		layer_set_visible("Assets_1", false);
 
         // Remover o blur
         layer_enable_fx("Desfoque", false);
@@ -84,6 +33,7 @@ if (instance_exists(oPlayer)) {
             global.puzzle_aberto = true;
 
             layer_set_visible("Puzzle", true);
+			layer_set_visible("Assets_1", true);
 
             // Ativar o blur
             layer_enable_fx("Desfoque", true);

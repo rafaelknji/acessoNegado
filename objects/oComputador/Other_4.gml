@@ -1,6 +1,13 @@
 // Esconder o puzzle ao iniciar
 var camada_puzzle = layer_get_id("Puzzle");
 
+// Esconder a camada Assets ao iniciar
+var camada_assets = layer_get_id("Assets_1");
+
+if (camada_assets != -1) {
+    layer_set_visible(camada_assets, false);
+}
+
 if (camada_puzzle != -1) {
     layer_set_visible(camada_puzzle, false);
 }

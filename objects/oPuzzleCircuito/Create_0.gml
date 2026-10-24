@@ -8,13 +8,6 @@ concluido = false;
 
 randomize();
 
-// Conexões do circuito que você montou
-// na Room, antes de embaralhar.
-//
-// 1 = cima
-// 2 = direita
-// 4 = baixo
-// 8 = esquerda
 
 solucao = [
      2, 10, 12,

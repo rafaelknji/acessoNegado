@@ -31,14 +31,12 @@ if (instance_exists(oPlayer)) {
 	    texto_y -= 15;
 	}
 
-        // =================================
-// CONTORNO PRETO FINO
-// =================================
 
+//fonte
 var escala = 0.6;
 var borda = 0.5;
 
-// Contorno discreto
+
 draw_set_color(c_black);
 draw_set_alpha(0.7);
 
@@ -66,9 +64,8 @@ draw_text_transformed(
     "[E] Interagir", escala, escala, 0
 );
 
-// =================================
+
 // TEXTO BRANCO
-// =================================
 
 draw_set_alpha(1);
 draw_set_color(c_white);
@@ -82,10 +79,10 @@ draw_text_transformed(
     0
 );
 
-        // Restaurar configurações
-        draw_set_font(-1);
-        draw_set_color(c_white);
-        draw_set_halign(fa_left);
-        draw_set_valign(fa_top);
+ // Restaurar configurações
+	draw_set_font(-1);
+	 draw_set_color(c_white);
+	draw_set_halign(fa_left);
+	draw_set_valign(fa_top);
     }
 }

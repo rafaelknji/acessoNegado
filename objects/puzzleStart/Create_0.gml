@@ -1,3 +1,5 @@
+
+
 randomize();
 
 global.tryCode = array_create(4, noone)

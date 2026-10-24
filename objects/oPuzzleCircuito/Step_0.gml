@@ -13,9 +13,7 @@ if (room == sala2 && !global.puzzle_aberto) {
 
 
 
-// ==========================================
 // 1. MENSAGEM DE CONCLUSÃO
-// ==========================================
 
 if (concluido) {
 
@@ -68,9 +66,7 @@ if (concluido) {
 }
 
 
-// ==========================================
 // 2. ESPERAR AS PEÇAS PARAREM DE GIRAR
-// ==========================================
 
 var animando = false;
 
@@ -100,9 +96,8 @@ if (animando) {
 }
 
 
-// ==========================================
+
 // 3. IDENTIFICAR AS PEÇAS
-// ==========================================
 
 var total_pecas = colunas * linhas;
 
@@ -132,9 +127,7 @@ if (array_length(pecas) != total_pecas) {
 }
 
 
-// ==========================================
 // 4. ORGANIZAR A GRADE AUTOMATICAMENTE
-// ==========================================
 
 // Encontrar os limites das posições
 
@@ -202,9 +195,7 @@ for (var i = 0; i < total_pecas; i++) {
 }
 
 
-// ==========================================
 // 5. CALCULAR AS CONEXÕES
-// ==========================================
 
 // Direções:
 // 1 = Cima
@@ -230,9 +221,8 @@ for (var i = 0; i < total_pecas; i++) {
         final_indice = i;
     }
 
-    // ==================================
+
     // PUZZLE 3X3
-    // ==================================
 
     if (colunas == 3 && linhas == 3) {
 
@@ -258,10 +248,8 @@ for (var i = 0; i < total_pecas; i++) {
 
     } else {
 
-        // ==================================
-        // PUZZLE 5X5
-        // ==================================
 
+        // PUZZLE 5X5
         // Conexões das sprites sem rotação
         switch (p.object_index) {
 
@@ -309,9 +297,8 @@ if (inicio_indice == -1 || final_indice == -1) {
 }
 
 
-// ==========================================
 // 6. VERIFICAR SOLUÇÃO DO 5X5
-// ==========================================
+
 
 if (colunas == 5 && linhas == 5) {
 
@@ -392,9 +379,8 @@ if (colunas == 5 && linhas == 5) {
 }
 
 
-// ==========================================
+
 // 7. VERIFICAR O CAMINHO DO 3X3
-// ==========================================
 
 var visitados = array_create(total_pecas, false);
 var fila = array_create(total_pecas, 0);
@@ -458,9 +444,7 @@ while (primeiro < ultimo) {
 }
 
 
-// ==========================================
 // 8. CONCLUSÃO DO 3X3
-// ==========================================
 
 if (concluido) {
 

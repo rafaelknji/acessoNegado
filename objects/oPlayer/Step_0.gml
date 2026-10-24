@@ -8,7 +8,6 @@ if (global.puzzle_aberto) {
 
 
 // MOVIMENTAÇÃO TOP-DOWN
-// =================================
 
 xsp = 0;
 ysp = 0;
@@ -32,9 +31,8 @@ if (keyboard_check(vk_down) || keyboard_check(ord("S"))) {
 }
 
 
-// =================================
+
 // DIREÇÃO E SPRITES
-// =================================
 
 var nova_sprite = sprite_index;
 
@@ -68,9 +66,8 @@ if (sprite_index != nova_sprite) {
 }
 
 
-// =================================
+
 // NORMALIZAR DIAGONAL
-// =================================
 
 var distancia = point_distance(0, 0, xsp, ysp);
 
@@ -80,9 +77,8 @@ if (distancia > 0) {
 }
 
 
-// =================================
+
 // MOVIMENTAÇÃO COM COLISÃO
-// =================================
 
 // Movimento horizontal
 var movimento_x = xsp * velocidade;
@@ -110,9 +106,7 @@ if (!place_meeting(x, y + movimento_y, objparedes1) &&
 }
 
 
-// =================================
 // ANIMAÇÃO
-// =================================
 
 if (xsp != 0 || ysp != 0) {
 
