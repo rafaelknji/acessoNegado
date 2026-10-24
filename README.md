@@ -1,9 +1,10 @@
 # Acesso Negado
+
 <p align="center">
   <img src="img/tittlecard.png" width="500" alt="Logo Acesso Negado">
 </p>
 
-
+---
 
 
 
