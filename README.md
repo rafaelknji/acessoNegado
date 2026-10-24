@@ -3,8 +3,8 @@
 <p align="center">
   <img src="img/tittlecard.png" width="500" alt="Logo Acesso Negado">
 </p>
----
 
+---
 
 
 
@@ -19,7 +19,7 @@
 - [Créditos](#créditos)
 
 
-
+---
 
 
 
@@ -28,14 +28,14 @@
 O jogo foi desenvolvido durante uma Game Jam com o tema **"Cidade Inclusiva e Acessível"**.
 O desafio consiste em desenvolver um jogo que aborde questões relacionadas à acessibilidade, inclusão digital, participação cidadã e construção de uma sociedade mais inclusiva.
 
-
+---
 
 ## Sobre o jogo
 
 Em uma sociedade distópica, marcada pela desigualdade e exclusão social, a tecnologia é utilizada como ferramenta de controle.
 O jogador acompanha uma personagem que explora ambientes, interage com computadores e resolve desafios para superar os obstáculos impostos pelo sistema.
 
-
+---
 
 
 ## Instalação
