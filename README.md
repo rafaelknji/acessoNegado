@@ -75,10 +75,10 @@ Pressione **F5** para iniciar o jogo pelo GameMaker.
 Projeto desenvolvido por:
 
 
-- [Integrante 1]
-- [Integrante 2]
-- [Integrante 3]
-- [Integrante 4]
+- Mell Ruiz Lopes
+- Henrique Satoshi Kanazawa
+- Igor Silva Santos
+- Rafael Kenji Obara
 
 <br>
 
