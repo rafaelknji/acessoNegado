@@ -6,6 +6,12 @@ if (global.puzzle_aberto) {
 }
 
 
+// Bloquear movimento durante o diálogo
+if (variable_global_exists("dialogo_ativo") && global.dialogo_ativo) {
+    image_speed = 0;
+    exit;
+}
+
 
 // MOVIMENTAÇÃO TOP-DOWN
 

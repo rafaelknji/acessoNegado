@@ -1,5 +1,4 @@
-
-
+window_set_size(1292,780)
 // Movimento
 velocidade = 1.5;
 xsp = 0;

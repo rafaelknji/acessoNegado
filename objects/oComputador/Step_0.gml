@@ -1,3 +1,81 @@
+// TESTE: pressionar T para ir à cena final
+if (room == sala3 && keyboard_check_pressed(ord("T"))) {
+
+    global.sala_destino = cenaFinal;
+    global.trocar_sala = true;
+}
+
+// =====================================
+// VERIFICAR SENHA DA SALA 3
+// =====================================
+
+if (room == sala3 && !global.trocar_sala) {
+
+    var acertou = false;
+
+    var tentativas = [
+        global.tryCode,
+        global.try1,
+        global.try2,
+        global.try3,
+        global.try4
+    ];
+
+    // Verificar todas as tentativas
+    for (var t = 0; t < array_length(tentativas); t++) {
+
+        var tentativa = tentativas[t];
+
+        if (array_length(tentativa) < 4) {
+            continue;
+        }
+
+        var correta = true;
+
+        for (var i = 0; i < 4; i++) {
+
+            if (tentativa[i] == noone ||
+                tentativa[i] != global.pinCode[i]) {
+
+                correta = false;
+                break;
+            }
+        }
+
+        if (correta) {
+            acertou = true;
+            break;
+        }
+    }
+
+    // Senha descoberta
+    if (acertou) {
+
+        show_debug_message("SENHA CORRETA! INICIANDO TRANSICAO");
+
+        global.puzzle_aberto = false;
+
+        var camada = layer_get_id("Puzzle");
+        if (camada != -1) {
+            layer_set_visible(camada, false);
+        }
+
+        camada = layer_get_id("Assets");
+        if (camada != -1) {
+            layer_set_visible(camada, false);
+        }
+
+        camada = layer_get_id("Desfoque");
+        if (camada != -1) {
+            layer_enable_fx(camada, false);
+        }
+
+        global.sala_destino = cenaFinal;
+        global.trocar_sala = true;
+    }
+}
+
+
 // Fechar puzzle
 if (global.puzzle_aberto) {
 
