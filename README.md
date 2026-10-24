@@ -85,6 +85,14 @@ Projeto desenvolvido por:
 
 ## Galeria
 
+<img src="img/telaInicial.png" width="500" alt="Tela inicial">
+<img src="img/room1.png" width="500" alt="Sala1">
+<img src="img/room2.png" width="500" alt="Sala2">
+<img src="img/room3.png" width="500" alt="Sala3">
+<img src="img/puzzle2.png" width="500" alt="Circuit Puzzle>
+
+
+
 
 
 
