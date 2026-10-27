@@ -22,7 +22,6 @@
 - [Instalação](#instalação)
 - [Nossa equipe](#nossa-equipe)
 - [Galeria](#galeria)
-- [Créditos](#créditos)
 
 
 <br>
